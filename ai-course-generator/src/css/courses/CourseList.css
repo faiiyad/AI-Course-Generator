@@ -1,0 +1,23 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.courses{
+    border: 1px solid red;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    /* nothing for now */
+    font-weight: bolder;
+}
