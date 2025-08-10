@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+.subtopic{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid rgba(236, 233, 234, 0);
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.subtopic-title{
+    font-size: x-large;
+}
+
+
+.subtopic-content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.subtopic-text{
+    width: 300px;
+    text-wrap: wrap;
+    text-align: justify;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0px 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgb(139, 139, 139);
+}
+
+.examples{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Google Sans Code', sans-serif;
+    border: 2px solid rgb(2, 107, 11);
+    text-align: left;
+    height: 100%;
+    background-color: rgb(36, 34, 34);
+    color: orange;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 500px;
+    text-wrap: wrap;
+}

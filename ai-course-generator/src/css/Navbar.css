@@ -1,15 +1,43 @@
-.main{
-    border: 1px solid black;
-    width: 99%;
-    position: absolute;
-    top: 0;
+.main {
+    position: sticky;
+    top: 5px;
+    left: 0;
+    right: 0;
+    border: 5px solid rgba(255, 253, 123, 0.822);
+    border-radius: 30px;
+    width: 95vw;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.685);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 60px;
+    backdrop-filter: blur(20px);
+    z-index: 1000; /* make sure it stays above content */
 }
 
 
+.home{
+    padding: 5px 5px;
+    font-size: x-large;
+    font-weight: 1000;
+}
+
+.main a{
+    color: rgb(0, 0, 0);
+    width: fit-content;
+}
 .blank{
-    width: 75%;
+    width: 1500px;
+}
+
+.divider{
+    width: 1rem;
+}
+
+.user{
+    cursor: pointer;
 }

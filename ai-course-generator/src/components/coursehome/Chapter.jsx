@@ -11,16 +11,7 @@ function Chapter({chapter}){
         <div className="chapter">
             <div className="chapter-name">{chapter.chapterTitle}</div>
             <div className="chapter-content">
-                <div className="subtopics">
-                    {chapter.subtopics.map((subtopic, id)=>(
-                        <div  key={id} className="subtopic">
-                            {subtopic.subtopicTitle}
-                        </div>
-                    ))}
-                </div>
                 <div className="progress">
-                    <h2>{quizProgress}/10</h2>
-                    <p>Quizes Completed</p>
                 </div>
             </div>
         </div>

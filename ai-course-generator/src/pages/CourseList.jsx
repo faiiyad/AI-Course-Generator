@@ -1,4 +1,4 @@
-import getCourses from "../scripts/getCourses"
+import getCourseNames from "../scripts/getCourseNames";
 import { useState, useEffect } from "react"
 import '../css/courses/CourseList.css'
 import CourseCard from "../components/courselist/CourseCard";
@@ -526,7 +526,7 @@ function CourseList(){
 
         const courseAPI = async () => {
             try{
-                const apiData = await getCourses();
+                const apiData = await getCourseNames();
                 console.log(apiData);
                 
                 setData(apiData);
@@ -548,7 +548,7 @@ function CourseList(){
                 <div className="courses">
                 {data.map((value, id) => (
                     <div key={id} className="course">                    
-                        <Link to='/courses/course'><CourseCard key={id} name={value.courseTitle} difficulty={value.difficulty}/></Link>
+                        <Link to={`/courses/${value.difficulty}/${value.id}`}><CourseCard key={value.id} name={value.courseTitle} difficulty={value.difficulty}/></Link>
                     </div>
                     
                     ))}
