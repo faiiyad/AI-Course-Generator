@@ -7,7 +7,7 @@ function Navbar() {
 
     return <>
         <div className="main">
-            <Link to='/' className="home">CourseGen AI</Link>
+            <Link to='/' className="nav-home">CourseGen AI</Link>
             <span className="blank"></span>
             <Link to='/courses'className="courses-nav">Courses</Link>
             <span className="divider"></span>

@@ -5,15 +5,13 @@ const generateCourse = async (prompt) => {
 
     try{
         const response = await axios.post('http://localhost:8080/api/getcourse', {prompt})
-        console.log(response.data);
+        const data = await response.data;
+        return data;
 
     }
     catch(error){
         console.log(error);
-    }
-    finally{
-        console.log("done");
-        
+        return false;
     }
 }
 

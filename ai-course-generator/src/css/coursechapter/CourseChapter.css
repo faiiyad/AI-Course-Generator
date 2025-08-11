@@ -7,10 +7,17 @@
 
 
 .chapter-number{
-    margin: 10vh 0px;
+    margin: 20px 10px;
     margin-bottom: 20px;
     font-size: 4rem;
     font-weight: bold;
+}
+
+.chapter-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .five{
@@ -20,6 +27,34 @@
 .chapter-title{
     font-size: 4rem;
     font-weight: bold;
-    margin: 10px 0px;
+    margin: 10px 50px;
+}
+
+.chapter-button{
+    color: white;
+    font-size: x-large;
+    border: 3px solid purple;
+    background-color: rgba(226, 59, 226, 0.616);
+    overflow: hidden;
+    border-radius: 10px;
+    height: fit-content;
+    width: 50px;
+}
+
+
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 400px) {
+    .chapter-header{
+        flex-direction: column;
+    }
 }
 

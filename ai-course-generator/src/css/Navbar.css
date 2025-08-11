@@ -3,12 +3,12 @@
     top: 5px;
     left: 0;
     right: 0;
-    border: 5px solid rgba(255, 253, 123, 0.822);
-    border-radius: 30px;
+    border: 5px solid rgba(0, 140, 255, 0.822);
+    /* border-radius: 30px; */
     width: 95vw;
     margin: 5px;
-    background-color: rgba(255, 255, 255, 0.685);
-    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.897);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -20,14 +20,14 @@
 }
 
 
-.home{
+.nav-home{
     padding: 5px 5px;
     font-size: x-large;
     font-weight: 1000;
 }
 
 .main a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     width: fit-content;
 }
 .blank{
@@ -40,4 +40,12 @@
 
 .user{
     cursor: pointer;
+}
+
+
+@media (max-width:1000px ) {
+    .home{
+        width: fit-content;
+        font-size: medium;
+    }
 }

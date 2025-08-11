@@ -1,0 +1,108 @@
+.quiz-single {
+    border: 3px solid black;
+    border-radius: 10px;
+    position: relative;
+    height: fit-content;
+    width: 400px;
+    text-wrap: wrap;
+    margin: 10px;
+    background-color: #ff66a3;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+
+.one-line-question{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.mcq-question   {
+    margin: 0px 2px;
+    padding: 10px;
+}
+
+
+.submit-mcq{
+    margin: 0px 5px;
+}
+
+.question{
+    font-weight: bolder;
+    font-size: large;
+    color: black;
+}
+
+
+.one-line-question .answer{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    height: fit-content;
+}
+
+.one-line-question .submit-one-line{
+    background-color: #4ade80;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    width: 50%;
+}
+
+.button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  font-weight: 750;
+  background: #4ade80;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: black;
+}
+
+.button:hover {
+  translate: 1.5px 1.5px;
+  box-shadow: 1.5px 1.5px 0 #000000;
+  background: #1ac2ff;
+}
+
+.button:active {
+  translate: 3px 3px;
+  box-shadow: 0 0 0 #000000;
+}
+
+
+.c{
+    font-weight: bolder;
+    font-size: 2rem;
+    background-color: #10b64d;
+    color: black;
+}
+
+.retry{
+    font-size: 1.5rem;
+}
+
+.w{
+    font-weight: bolder;
+    font-size: 2rem;
+    background-color: rgb(255, 57, 107);
+    color: black;
+}

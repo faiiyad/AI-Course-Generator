@@ -569,6 +569,7 @@ def upload_course(course):
     course_name.insert_one(course_name_id)
 
     print("success")
+    return course["difficulty"], str(result.inserted_id)
 
 def load_course_names():
     course_name = courses["coursename"]
