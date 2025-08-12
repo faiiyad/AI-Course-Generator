@@ -1,16 +1,28 @@
+.course-content{
+    height: auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .title{
     color: black;
     text-wrap: wrap;
+    font-size: 5rem;
 }
 
 
 .description{
+    font-size: 1.2rem;
     border: 1px solid black;
     border-radius: 10px;
     width: 50%;
     text-wrap: wrap;
     margin: 5px;
     padding: 10px;
+    background-color: #ff66a3;
 }
 
 .chapter-list{
@@ -19,4 +31,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.chapter-list a:hover{
+    transform: scale(1.1);
+}
+
+
+.chapter-list a{
+    color: black;
 }

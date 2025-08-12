@@ -38,6 +38,11 @@
     width: 1rem;
 }
 
+.left{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
 .user{
     cursor: pointer;
 }

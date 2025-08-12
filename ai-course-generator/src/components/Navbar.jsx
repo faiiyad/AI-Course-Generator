@@ -7,11 +7,13 @@ function Navbar() {
 
     return <>
         <div className="main">
-            <Link to='/' className="nav-home">CourseGen AI</Link>
+            <Link to='/' className="nav-home">CourseGen</Link>
             <span className="blank"></span>
-            <Link to='/courses'className="courses-nav">Courses</Link>
-            <span className="divider"></span>
-            <p className="user">User</p>
+            <div className="left">
+                <Link to='/courses'className="courses-nav">Courses</Link>
+                <span className="divider"></span>
+                <p className="user">User</p>
+            </div>
         </div>
     </>
 }

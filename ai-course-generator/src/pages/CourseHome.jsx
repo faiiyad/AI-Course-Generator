@@ -34,15 +34,17 @@ function CourseHome() {
     }, [])
     
     return <>
-        <h1 className="title">Welcome to {course.courseTitle}!!</h1>
-        <p className="description"> {course.description}</p>
-        {/* list of chapters */}
-        <h2>Chapters:</h2>
-        <div className="chapter-list">
+        <div className="course-content">
+            <h1 className="title">Welcome to {course.courseTitle}!!</h1>
+            <p className="description"> {course.description}</p>
             
-            {course.chapters.map((chapter, idx)=>(
-                <Link to={`/courses/${difficulty}/${id}/${idx}`}><Chapter key={idx} chapter={chapter}></Chapter></Link>
-            ))}
+            <h1>Chapters:</h1>
+            <div className="chapter-list">
+                
+                {course.chapters.map((chapter, idx)=>(
+                    <Link to={`/courses/${difficulty}/${id}/${idx}`}><Chapter key={idx} chapter={chapter}></Chapter></Link>
+                ))}
+            </div>
         </div>
     </>
 }

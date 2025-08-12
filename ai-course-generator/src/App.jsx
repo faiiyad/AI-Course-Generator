@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import CourseHome from './pages/CourseHome';
 import CourseChapter from './pages/CourseChapter';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/courses/:difficulty/:id' element={<CourseHome></CourseHome>}></Route>
         <Route path='/courses/:difficulty/:id/:index' element={<CourseChapter></CourseChapter>}></Route>
       </Routes>
+      <Footer></Footer>
     </>
   )
 }

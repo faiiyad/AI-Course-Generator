@@ -27,11 +27,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
 .media{
     display: flex;
     border-radius: 20px;
+    background-color: rgb(0, 153, 255);
     /* border: 2px solid black; */
     height: 50%;
     width: 100%;
@@ -48,13 +50,20 @@
 
 
 .difficulty{
-    font-weight: bold;
+    font-weight: bolder;
 }
 
-.Beginner{
+.beginner{
     color: green;
+    border-color: #4ade80;
 }
 
-.Intermediate{
-    color: rgb(252, 122, 0);
+.intermediate{
+    color: rgb(255, 102, 0);
+    border-color: rgb(223, 219, 18);
+}
+
+.advanced{
+    color: rgb(255, 0, 106);
+    border-color: rgb(255, 0, 106);
 }

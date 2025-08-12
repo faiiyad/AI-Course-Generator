@@ -48,10 +48,11 @@ function CourseChapter() {
                 <Subtopic key={id} subtopic={subtopic}></Subtopic>
             ))}
             <div className="chapter-summary">
+                <h2>Chapter Summary</h2>
                 <div className="summary">{courseData.chapterSummary}</div>
             </div>
             <div className="quiz-content">
-                <p>Quiz</p>
+                <h1>Quiz</h1>
                 <div className="quiz-list">
                     
                     {courseData.quiz.map((quiz, idx) => (

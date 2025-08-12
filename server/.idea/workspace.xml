@@ -5,19 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27fcbfc7-20ba-45c2-aa49-53418ed8f1d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/public/assets/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/public/assets/wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/public/vite.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/components/coursehome/Chapter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/components/coursehome/Chapter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/components/courselist/CourseCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/components/courselist/CourseCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/coursechapter/CourseChapter.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/coursechapter/CourseChapter.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/coursehome/Chapter.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/coursehome/Chapter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/coursehome/CourseHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/coursehome/CourseHome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/courses/CourseCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/courses/CourseCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/css/courses/CourseList.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/css/courses/CourseList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseChapter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseChapter.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseHome.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ai-course-generator/src/pages/CourseList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ai-course-generator/src/scripts/getCourses.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +63,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <option name="ENV_FILES" value="" />

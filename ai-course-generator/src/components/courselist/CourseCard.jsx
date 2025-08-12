@@ -3,9 +3,9 @@ import '../../css/courses/CourseCard.css'
 function CourseCard({name, difficulty}){
 
     return <>
-    <div className="course-card">
+    <div className={`course-card ${difficulty}`}>
         <div className="media">
-            <img src='/assets/background.jpg' alt="image" className='card-image'/>
+            <img src='/assets/wallpaper_anime.jpeg' alt="" className='card-image'/>
         </div>
         <div className="text">
             <p>{name}</p>
