@@ -14,7 +14,6 @@ function CourseList(){
         const courseAPI = async () => {
             try{
                 const apiData = await getCourseNames();
-                console.log(apiData);
                 
                 setData(apiData);
             }

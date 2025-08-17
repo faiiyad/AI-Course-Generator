@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 from google import  genai
 import json
 
-load_dotenv()
+load_dotenv('../.env')
 
 def generate_course(user_prompt: str):
     client = genai.Client()

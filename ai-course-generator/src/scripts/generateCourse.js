@@ -4,7 +4,7 @@ const generateCourse = async (prompt) => {
     
 
     try{
-        const response = await axios.post('http://localhost:8080/api/getcourse', {prompt})
+        const response = await axios.post('http://localhost:8080/database/upload_course', {prompt})
         const data = await response.data;
         return data;
 

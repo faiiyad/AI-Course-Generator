@@ -1,46 +1,26 @@
-from flask import Flask, jsonify, request
+from flask import Flask
 from flask_cors import CORS
-from database import connect, upload_course, load_course_names, load_course
-from llm import generate_course
+from database.database import database
+from user.user import user
+from flask_jwt_extended import JWTManager
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
 
-connect()
-print("connected to db")
 
 app = Flask(__name__)
+app.register_blueprint(database, url_prefix='/database')
+app.register_blueprint(user, url_prefix='/user')
 cors = CORS(app, origins='*')
+jwt = JWTManager(app)
+
+app.config["JWT_SECRET_KEY"] = JWT_SECRET_KEY
 
 @app.route('/')
 def index():
     return 'Hello World'
-
-@app.route('/api/data')
-def data():
-    id = request.args["id"]
-    print(id)
-    difficulty = request.args["difficulty"]
-    course = load_course(id, difficulty)
-    course_data =  jsonify(course)
-    return course_data
-
-response_final = ""
-
-@app.route('/api/getcourse', methods=['POST'])
-def get_course():
-    user_prompt = request.get_json()
-    print(user_prompt["prompt"])
-    course = generate_course(user_prompt)
-    diff, id = upload_course(course)
-
-    load_data = jsonify({"diff": diff, "id": id})
-
-    return load_data
-
-
-@app.route('/api/loadcoursenames')
-def load_course_list():
-    arr = jsonify(load_course_names())
-    return arr
 
 
 if __name__ == "__main__":

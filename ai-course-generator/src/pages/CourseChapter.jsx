@@ -57,10 +57,11 @@ function CourseChapter() {
                     
                     {courseData.quiz.map((quiz, idx) => (
                         quiz.type === "one-word" ? (
-                            <OneLine key={quiz.answer} question={quiz.question} answer={quiz.answer} />
+                            <OneLine key={quiz.answer} number={idx} question={quiz.question} answer={quiz.answer}  />
                         ) : (
                             <Mcq
                             key={quiz.answer}
+                            number={idx}
                             question={quiz.question}
                             answer={quiz.answer}
                             options={quiz.options}

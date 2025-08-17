@@ -1,9 +1,12 @@
 import { useState } from "react"
+import {useParams} from "react-router-dom"
 import '../../css/coursechapter/Quiz.css'
+import updateScore from "../../scripts/scoring/updateScore";
+import { useToken } from "../../context/TokenContext";
 
-function OneLine({question, answer}){
-    console.log("rendering");
-    
+function OneLine({number, question, answer}){
+    const {token} = useToken();
+    const {difficulty, id, index} = useParams();    
     const [user, setUser] = useState("");       
     const [showCorrect, setShowCorrect] = useState(false);
     const [showWrong, setShowWrong] = useState(false);
@@ -22,10 +25,14 @@ function OneLine({question, answer}){
                 <button className="submit-one-line button" onClick ={()=> {
                     if (user.toLowerCase() === answer.toLowerCase()){
                         setShowCorrect(true);
+                        updateScore(token, true, id, index, number);
+                        
                         setUser("");
                     }else{
                         setShowWrong(true);
                         setUser("");
+                        console.log(number, difficulty, id, index);
+                        updateScore(token, false, "", "", "");
                         setTimeout(()=>{setShowWrong(false)}, 1000);
                         
                     }

@@ -1,45 +1,33 @@
-from bson import ObjectId
-from dotenv import load_dotenv
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-import os
-
-load_dotenv()
+from .utils import load_course, upload_course, load_course_names
+from .llm import generate_course
+from flask import Blueprint, request, jsonify
 
 
-mongo_user = os.getenv("mongodb_user")
-mongo_pass = os.getenv("mongodb_pass")
+database = Blueprint("database", __name__)
 
 
-uri = f'mongodb+srv://{mongo_user}:{mongo_pass}@w3s.0uerwtd.mongodb.net/?retryWrites=true&w=majority&appName=W3S'
 
-def connect():
-    global client
-    global courses
-    client = MongoClient(uri, server_api=ServerApi('1'))
-    courses = client.Courses
 
-    return client, courses
+@database.route('/load_course')
+def route_load_course():
+    course_id = request.args["id"]
+    difficulty = request.args["difficulty"]
+    course = load_course(course_id, difficulty)
+    course_data = jsonify(course)
+    return course_data
 
-def upload_course(course):
-    collection = courses[course["difficulty"]]
-    result = collection.insert_one(course)
+@database.route('/upload_course', methods=['POST'])
+def route_upload_course():
+    user_prompt = request.get_json()
+    course = generate_course(user_prompt)
+    diff, course_id = upload_course(course)
 
-    course_name_id = {"courseTitle": course["courseTitle"], "difficulty": course["difficulty"], "id": str(result.inserted_id)}
-    course_name = courses["coursename"]
-    course_name.insert_one(course_name_id)
+    load_data = jsonify({"diff": diff, "id": course_id})
 
-    print("success")
-    return course["difficulty"], str(result.inserted_id)
+    return load_data
 
-def load_course_names():
-    course_name = courses["coursename"]
-    cursor = course_name.find({}, {"_id": 0})
-    return list(cursor)
+@database.route('/load_course_list')
+def route_load_course_list():
+    arr = jsonify(load_course_names())
+    return arr
 
-def load_course(id, difficulty):
-    collection = courses[f'{difficulty}']
-    cursor = collection.find_one({"_id": ObjectId(id)}, {"_id": 0})
-    print("course found")
-    print(cursor)
-    return cursor
