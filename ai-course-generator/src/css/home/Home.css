@@ -24,6 +24,25 @@
 }
 
 
+.home-warning {
+  position: fixed;      /* float above content */
+  top: 50%;             /* center vertically */
+  left: 50%;            /* center horizontally */
+  transform: translate(-50%, -50%); /* truly center it */
+  
+  width: 420px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: xx-large;
+  z-index: 9999;        /* above everything */
+  
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: 12px solid black;
+  text-align: center;   /* optional: center text */
+}
+
+
 .brutalist-container {
   position: relative;
   width: 250px;

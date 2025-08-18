@@ -12,7 +12,7 @@ function Navbar() {
             <div className="left">
                 <Link to='/courses'className="courses-nav">Courses</Link>
                 <span className="divider"></span>
-                <p className="user">User</p>
+                <Link to='/user' className="user">User</Link>
             </div>
         </div>
     </>

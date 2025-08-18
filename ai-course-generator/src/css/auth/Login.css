@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.login-input{
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 12px;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+    font-family: 'Jersey 15', sans-serif;
+    font-size: large;
+}
+
+
+.login-button{
+    margin: 10px;
+    border: 3px solid rgb(60, 138, 255);
+}
+
+.login-button a{
+    color: white;
+}
+
+.login-button:hover{
+    transform: scale(1.1);
+}

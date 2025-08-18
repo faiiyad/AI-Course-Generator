@@ -31,7 +31,6 @@ function OneLine({number, question, answer}){
                     }else{
                         setShowWrong(true);
                         setUser("");
-                        console.log(number, difficulty, id, index);
                         updateScore(token, false, "", "", "");
                         setTimeout(()=>{setShowWrong(false)}, 1000);
                         

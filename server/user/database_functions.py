@@ -1,6 +1,7 @@
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
+from database.utils import load_course_names
 import os
 
 
@@ -48,7 +49,36 @@ def update_score_correct(user, course, chapter, quiz):
                           {"$set": {f'course_data.{course}.{chapter}.{quiz}': 1},
                            "$inc": {'total_success': 1, 'total_attempts': 1}})
 
-
 def update_score_incorrect(user):
     collection.update_one({"username": user}, {"$inc": {"total_attempts": 1}})
+
+def get_course_map():
+    course_list = load_course_names()
+    course_map = {}
+    for course in course_list:
+        course_map[course["id"]] = course["courseTitle"]
+    return course_map
+
+def get_user_data(user):
+    user_data = collection.find_one({"username": f'{user}'}, {"_id": 0, "password": 0})
+    course_data = user_data["course_data"]
+    course_map = get_course_map()
+    course_mapped = [
+                        {
+                            "courseTitle": course_map[x],
+                            "data": [
+                                {
+                                    "chapter": i + 1,
+                                    "correct": sum(course_data[x][i])
+                                }
+                                for i in range(5)
+                            ]
+                        }
+                        for x in course_data
+                    ]
+    return {"username": user_data["username"],
+            "totalStats": {"attempted": user_data["total_attempts"], "correct": user_data["total_success"]},
+            "courseMapped": course_mapped}
+
+
 

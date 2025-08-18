@@ -3,11 +3,14 @@ import generateCourse from "../scripts/generateCourse";
 import '../css/home/Home.css'
 import Loader from "../components/Loader";
 import {useNavigate} from 'react-router-dom';
+import { useToken } from "../context/TokenContext";
 
 function Home() {
+    const {token} = useToken();
     const navigate = useNavigate()
     const [prompt, setPrompt] = useState("");
     const [loading, setLoading] = useState(false);
+    const [warning, setWarning] = useState(false)
 
 
 
@@ -19,10 +22,7 @@ function Home() {
     else { return <>
             <div className="home">
                 <div className="home-wrapper">
-                    {/* <div className="home-header">
-                        <h1 className="home-line">Generate a course about</h1>
-                        <h1 className="home-hook">Anything!</h1>
-                    </div>         */}
+                    {warning && <div className="home-warning">You must enter a prompt!</div>}
                     <div className="brutalist-container">
                         <input type="text" name="" id="main-input" placeholder="TYPE HERE"
                             value={prompt}
@@ -33,9 +33,13 @@ function Home() {
                     </div>
                     <button className="brutalist-button" onClick={async() => {
                         
-                        if(!prompt){
+                        if (!token){
+                            navigate("/landing")
+                        }
+                        else if(!prompt){
 
-                            window.alert("Please enter a prompt");
+                            setWarning(true);
+                            setTimeout(() => (setWarning(false)), 2000)
 
                         }else{
                             setLoading(true);
