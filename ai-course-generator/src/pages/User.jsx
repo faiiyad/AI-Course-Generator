@@ -25,7 +25,6 @@ function User(){
             }
             catch(err){
                 console.log(err);
-                navigate("/login");
             }
         }
 
@@ -34,20 +33,22 @@ function User(){
     }, [])
 
     
-    if (token){
-    return <>
-        <h1>Welcome  {userData?.username ?? "user"}</h1>
-        <TotalStats success={userData?.totalStats?.correct ?? 1} attempts={userData?.totalStats?.attempted ?? 1}></TotalStats>
-        <h1>Course Data</h1>
-        <div className="course-data">
-            {userData?.courseMapped.map((course, idx)=>(
-                <CourseStats key={course?.courseTitle ?? idx} course = {course}></CourseStats>
-            ))}
-        </div>
-        
-    </>}
+    if (!token){
+        navigate('/landing')
+    }
     else{
-        navigate("/login")
+        return <>
+            <h1>Welcome  {userData?.username ?? "user"}</h1>
+            <TotalStats success={userData?.totalStats?.correct ?? 1} attempts={userData?.totalStats?.attempted ?? 1}></TotalStats>
+            <h1>Course Data</h1>
+            <div className="course-data">
+                {userData?.courseMapped.map((course, idx)=>(
+                    <CourseStats key={course?.courseTitle ?? idx} course = {course}></CourseStats>
+                ))}
+            </div>
+            
+        </>
+        
         
     }
 }
