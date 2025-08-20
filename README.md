@@ -1,6 +1,7 @@
 # CourseGen
 
-### [Live Video Showcase](https://youtu.be/1Epwa6teADc)
+### <a href="https://www.youtube.com/watch?v=1Epwa6teADc" target="_blank">Video Showcase</a>
+
 
 ![banner](https://raw.githubusercontent.com/faiiyad/AI-Course-Generator/refs/heads/main/assets/hat.png)
 
